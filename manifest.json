@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Unwinator",
+  "version": "1.1.0",
+  "description": "Mangles web pages into stronger Unwinese-ish English, with real pairwise Spooner-style sound swaps.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {"default_popup": "popup.html", "default_title": "Unwinator"},
+  "content_scripts": [{"matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle"}],
+  "browser_specific_settings": {"gecko": {"id": "unwinator@example.local"}}
+}
